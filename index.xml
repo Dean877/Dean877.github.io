@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dean</title>
+    <link>https://Dean877.github.io/</link>
+    <description>Recent content on Dean</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://Dean877.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>*python的小技巧*</title>
+      <link>https://Dean877.github.io/python%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Fri, 31 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Dean877.github.io/python%E7%AC%94%E8%AE%B0/</guid>
+      <description>python的小技巧  python没有++或者&amp;ndash;
+ list和字符串相互转换  将一个字符串转为一个List
+ #定义一个字符串名为phrase phrase = &amp;#34;Hello word!&amp;#34; #用&amp;#39;list&amp;#39;转换并赋值给plist plist = list(phrase)  将一个List转为一个字符串
+ #定义名为plist的List plist = [&amp;#39;H&amp;#39;, &amp;#39;e&amp;#39;, &amp;#39;l&amp;#39;, &amp;#39;l&amp;#39;, &amp;#39;o&amp;#39;, &amp;#39; &amp;#39;, &amp;#39;w&amp;#39;, &amp;#39;o&amp;#39;, &amp;#39;r&amp;#39;, &amp;#39;d&amp;#39;, &amp;#39;!&amp;#39;] #用join()函数转换 phrase = &amp;#39;&amp;#39;.join(plist) copy? #定义两个list second = [1,2,3,4,5] third = [] #若直接=赋值 third = second ##当scond列表改变时，third也会跟着改变 &amp;gt;&amp;gt;&amp;gt; second.append(6) &amp;gt;&amp;gt;&amp;gt; second [1, 2, 3, 4, 5, 6] &amp;gt;&amp;gt;&amp;gt; third [1, 2, 3, 4, 5, 6] #copy方法 third = second.</description>
+    </item>
+    
+    <item>
+      <title>manjaro装机后基本配置</title>
+      <link>https://Dean877.github.io/manjaro%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 21 May 2020 21:28:44 +0800</pubDate>
+      
+      <guid>https://Dean877.github.io/manjaro%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
+      <description>  添加archlinuxcn的源  sudo nano /etc/pacman.conf  在文件末尾输入：[archlinuxcn]
+  SigLevel = Optional TrustedOnly
+Server = http://mirrors.163.com/archlinux-cn/$arch 3.按ctrl+x退出，输入y保存
+  更新与同步sudo pacman -Syyusudo pacman -S archlinuxcn-keyringsudo pacman -Syyu   安装输入法  为了方便所以先安装yay ：sudo pacman -S yay  安装fcitx : yay -S fcitx-im kcm-fcitx fcitx-sogouimebs  在~目录下新建.xprofile文件：sudo nano ~/.xprofile  输入内容export GTK_IM_MODULE=fcitxexport QT_IM_MODULE=fcitxexport XMODIFIERS=&amp;quot;@im=fcitx&amp;quot;    </description>
+    </item>
+    
+    <item>
+      <title>Hugo的个人博客踩坑事项</title>
+      <link>https://Dean877.github.io/hugo%E7%9A%84blog%E5%88%B6%E4%BD%9C/</link>
+      <pubDate>Tue, 31 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://Dean877.github.io/hugo%E7%9A%84blog%E5%88%B6%E4%BD%9C/</guid>
+      <description>个人blog制作的坑，hugo &amp;ndash; 此为本人心酸历程得出，制作环境在manjaro上搭建
+  安装hugo
+pacman -S hugo
+or
+去下载官方包安装
+     新建hugo博客文件夹 hugo new site 文件夹名字
+  配置git 如果出现显示你是谁的命令 &amp;ndash;请按照自己的username和email输入
+git config &amp;ndash;global user.email &amp;ldquo;你自己的邮箱&amp;rdquo;
+git config &amp;ndash;global user.name &amp;ldquo;用户名&amp;rdquo;
+    本地启动预览命令为 hugo server -t m10c（m10c为你的主题名） &amp;ndash;buildDrafts    如何新建文章g &amp;ndash;pwd:根目录下 hugo new post/(名字).md 编写是markdown格式
+  远端部署
+  生成public文件夹hugo &amp;ndash;themes=m10c &amp;ndash;baseUrl=&amp;ldquo;https://Dean877.github.io/&amp;quot; &amp;ndash;buildDrafts  进入public文件夹
+  git init</description>
+    </item>
+    
+    <item>
+      <title>CentOS 7 基本分区与换源</title>
+      <link>https://Dean877.github.io/centos-7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://Dean877.github.io/centos-7/</guid>
+      <description>CentOS 7 安装分区配置   boot分区： 引导分区，包含了系统启动的必要内核文件，即使根分区顺坏也能正常引导启动 一般这些文件所占空间在200M以下
+  /分区（根分区）： 所有的文件都从这里开始，你可以比喻为Windows的C盘，但其实有区别。如果你有大量的数据在根目录下（比如FTP等）可以划分大一点的空间
+  swap分区： 类似于Windows的虚拟内存，在内存不够用时占用硬盘的虚拟内存来进行临时数据的存放，而对于linux就是swap分区
+  home分区: 存放用户数据，HOME的结构一般是 HOME/userName/userFile，如果不分则默认在/目录下
+  var分区: 用于log日志的文件的存放，如果不分则默认在/目录下
+   设置终端快捷键 /usr/bin/gnome-terminal CentOS7更换源   备份 mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo.backup  下载新的源 阿里云源
+  wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo  or
+  curl -o /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo  网易云源
+  wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.163.com/.help/CentOS7-Base-163.repo    生成缓存 yum makecacheyum makecache fast</description>
+    </item>
+    
+  </channel>
+</rss>
