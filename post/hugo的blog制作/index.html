@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Hugo的个人博客踩坑事项 // Dean</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.87.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Dean" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://Dean877.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hugo的个人博客踩坑事项"/>
+<meta name="twitter:description" content="个人blog制作的坑，hugo &ndash; 此为本人心酸历程得出，制作环境在manjaro上搭建
+  安装hugo
+pacman -S hugo
+or
+去下载官方包安装
+     新建hugo博客文件夹 hugo new site 文件夹名字
+  配置git 如果出现显示你是谁的命令 &ndash;请按照自己的username和email输入
+git config &ndash;global user.email &ldquo;你自己的邮箱&rdquo;
+git config &ndash;global user.name &ldquo;用户名&rdquo;
+    本地启动预览命令为 hugo server -t m10c（m10c为你的主题名） &ndash;buildDrafts    如何新建文章g &ndash;pwd:根目录下 hugo new post/(名字).md 编写是markdown格式
+  远端部署
+  生成public文件夹hugo &ndash;theme=m10c &ndash;baseUrl=&ldquo;https://Dean877.github.io/&quot; &ndash;buildDrafts  进入public文件夹
+  git init"/>
+
+    <meta property="og:title" content="Hugo的个人博客踩坑事项" />
+<meta property="og:description" content="个人blog制作的坑，hugo &ndash; 此为本人心酸历程得出，制作环境在manjaro上搭建
+  安装hugo
+pacman -S hugo
+or
+去下载官方包安装
+     新建hugo博客文件夹 hugo new site 文件夹名字
+  配置git 如果出现显示你是谁的命令 &ndash;请按照自己的username和email输入
+git config &ndash;global user.email &ldquo;你自己的邮箱&rdquo;
+git config &ndash;global user.name &ldquo;用户名&rdquo;
+    本地启动预览命令为 hugo server -t m10c（m10c为你的主题名） &ndash;buildDrafts    如何新建文章g &ndash;pwd:根目录下 hugo new post/(名字).md 编写是markdown格式
+  远端部署
+  生成public文件夹hugo &ndash;theme=m10c &ndash;baseUrl=&ldquo;https://Dean877.github.io/&quot; &ndash;buildDrafts  进入public文件夹
+  git init" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://Dean877.github.io/post/hugo%E7%9A%84blog%E5%88%B6%E4%BD%9C/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2020-03-31T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-03-31T00:00:00+00:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://Dean877.github.io/"><img class="app-header-avatar" src="https://cdn.jsdelivr.net/gh/Dean877/Dean-images/a19117b2587c2a42a486ef98d92aa44.jpg" alt="Dean" /></a>
+      <h1>Dean</h1>
+      <p>生命不止，学习不停</p>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Hugo的个人博客踩坑事项</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 31, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="个人blog制作的坑hugo">个人blog制作的坑，hugo</h1>
+<p>&ndash; 此为本人心酸历程得出，制作环境在manjaro上搭建</p>
+<ul>
+<li>
+<p>安装hugo</p>
+<p><strong>pacman -S hugo</strong></p>
+<p>or</p>
+<p><strong>去下载官方包安装</strong></p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>新建hugo博客文件夹
+<strong>hugo new site 文件夹名字</strong></p>
+</li>
+<li>
+<p>配置git
+<strong>如果出现显示你是谁的命令</strong>
+&ndash;请按照自己的username和email输入</p>
+<p><strong>git config &ndash;global user.email &ldquo;你自己的邮箱&rdquo;</strong></p>
+<p><strong>git config &ndash;global user.name &ldquo;用户名&rdquo;</strong></p>
+</li>
+</ul>
+<hr>
+<ul>
+<li>本地启动预览命令为
+<strong>hugo server -t m10c（m10c为你的主题名） &ndash;buildDrafts</strong></li>
+</ul>
+<!-- raw HTML omitted -->
+<ul>
+<li>
+<p>如何新建文章g
+&ndash;pwd:根目录下
+<strong>hugo new post/(名字).md</strong>
+编写是markdown格式</p>
+</li>
+<li>
+<p>远端部署</p>
+<ol>
+<li>
+<p>生成public文件夹<!-- raw HTML omitted --> <!-- raw HTML omitted -->hugo &ndash;theme=m10c &ndash;baseUrl=&ldquo;<a href="https://Dean877.github.io/%22">https://Dean877.github.io/&quot;</a> &ndash;buildDrafts<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p>进入public文件夹</p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->git init</p>
+<p>git add .</p>
+<p>git commit -m &ldquo;XXXX&rdquo;<!-- raw HTML omitted --></p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->git remote add origin <a href="https://github.com/Dean877/dean877.github.io.git">https://github.com/Dean877/dean877.github.io.git</a><!-- raw HTML omitted --></p>
+</li>
+<li>
+<p><!-- raw HTML omitted -->git push -u origin master<!-- raw HTML omitted --></p>
+</li>
+</ol>
+</li>
+<li>
+<p>第二次上传<!-- raw HTML omitted -->
+重新生成public文件夹上传即可</p>
+<ol>
+<li>
+<p>git init</p>
+</li>
+<li>
+<p>git add .</p>
+</li>
+<li>
+<p>git commit -m &ldquo;XXXX&rdquo;</p>
+</li>
+<li>
+<p>git remote add origin <a href="https://github.com/Dean877/dean877.github.io.git">https://github.com/Dean877/dean877.github.io.git</a></p>
+</li>
+<li>
+<p>git status</p>
+</li>
+<li>
+<p>git push</p>
+</li>
+</ol>
+</li>
+</ul>
+<hr>
+<ul>
+<li>
+<p>m10c的配色调整</p>
+<p><strong>darkestColor = &ldquo;#XXX&quot;左边颜色</strong></p>
+<p><strong>darkColor = &ldquo;#XXX&quot;右边颜色</strong></p>
+<p><strong>lightColor = &ldquo;#XXX&quot;简介颜色</strong></p>
+<p><strong>lightestColor = &ldquo;#XXX&rdquo; 名字颜色</strong></p>
+<p><strong>primaryColor = &ldquo;#XXX&rdquo; 头像框色</strong></p>
+</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
